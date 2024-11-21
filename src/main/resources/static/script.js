@@ -1,13 +1,14 @@
+let populationChart;
 document.getElementById('filterButton').addEventListener('click', () => {
     const region = document.getElementById('regionFilter').value;
     const year = document.getElementById('yearFilter').value;
-    fetchPopulationData(region, year);
+    fetchPopulationData(country, year);
 });
 
 function fetchPopulationData(region = '', year = '') {
     let url = '/api/population';
     if (region || year) {
-        url += `?region=${region}&year=${year}`;
+        url += `?country=${country}&year=${year}`;
     }
 
     fetch(url)
@@ -17,9 +18,12 @@ function fetchPopulationData(region = '', year = '') {
             const males = data.map(item => item.males);
             const females = data.map(item => item.females);
 
+            if (populationChart) {
+                populationChart.destroy();
+            }
             const ctx = document.getElementById('population-pyramid').getContext('2d');
 
-            new Chart(ctx, {
+            populationChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
                     labels: ageGroups,
@@ -54,5 +58,4 @@ function fetchPopulationData(region = '', year = '') {
         .catch(error => console.error('Error fetching population data:', error));
 }
 
-// Initial load without filters
 fetchPopulationData();
