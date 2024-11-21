@@ -9,12 +9,42 @@
 <body>
 <div class="container">
     <h1>Population Visualization</h1>
+    <div class="filters">
+        <select id="regionFilter">
+            <option value="">All Regions</option>
+            <option value="India">India</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="China">China</option>
+            <option value="Phillipines">Phillipines</option>
+            <option value="Vietnam">Vietnam</option>
+            <option value="Japan">Japan</option>
+            <option value="Srilanka">Srilanka</option>
+            <option value="Nepal">Nepal</option>
+            <option value="Saudi Arabia">Saudi Arabia</option>
+        </select>
+        <select id="yearFilter">
+            <option value="">All Years</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2012016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+        </select>
+        <button id="filterButton">Apply Filters</button>
+    </div>
     <div class="chart-container">
         <canvas id="population-pyramid"></canvas>
     </div>
 </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
