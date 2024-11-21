@@ -36,6 +36,16 @@ cd population-visualization
   * Using the Spring Boot Maven wrapper
 
          ./mvnw spring-boot:run
+    
+  * Open the application in your browser: Once the application starts, navigate to  
+`[http://localhost:8081]`  to view the population visualization dashboard.
+
+## Accessing the Application
+
+**URL** : `[http://localhost:8081]`
+
+**Available Endpoints** :
+`[/api/population]` – Returns population data for the selected region and year (as JSON).
 
 
 
