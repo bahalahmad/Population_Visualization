@@ -104,6 +104,32 @@ The backend returns the population data for the specified region and year, which
 The backend handles requests to the `[/api/population]` endpoint, retrieving the corresponding population data from a database or static source.
 The data is returned as a JSON response, which the frontend uses to display the population pyramid chart.
 
+
+## Folder Structure
+
+```bash
+Population_Visualization
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com
+│   │   │       └── kb
+│   │   │           └── population
+                           └── visualization
+│   │   │                           ├── PopulationVisualizationApplication.java  # Main Spring Boot application
+│   │   │               ├── controller
+│   │   │               │   └── Controller.java  # Handles API requests
+│   │   │               └── model
+│   │   │               |     └── Model.java  # Represents population data
+                        ├── service
+│   │   │               │   └── Service.java  # Business logic and data processing
+│   │   └── resources
+│   │       ├── application.properties  # Configuration for Spring Boot
+│   │       └── static
+│   │           └── index.html  # Frontend HTML file
+|               └── style.css   # CSS file 
+|               └── app.js      # JS file
+
        
       
 
