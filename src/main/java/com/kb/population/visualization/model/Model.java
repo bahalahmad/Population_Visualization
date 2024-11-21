@@ -6,18 +6,22 @@ import java.util.List;
         private String ageGroup;
         private int males;
         private int females;
+        private String country;
+        private String year;
 
-        // Constructor
-        public Model(String ageGroup, int males, int females) {
+        // Default constructor
+        public Model() {}
+
+        // Constructor with all fields
+        public Model(String ageGroup, int males, int females, String country, String year) {
             this.ageGroup = ageGroup;
             this.males = males;
             this.females = females;
+            this.country = country;
+            this.year = year;
         }
 
-
-        public Model() {}
-
-
+        // Getter and Setter methods
         public String getAgeGroup() {
             return ageGroup;
         }
@@ -42,12 +46,30 @@ import java.util.List;
             this.females = females;
         }
 
+        public String getCountry() {
+            return country;
+        }
+
+        public void setCountry(String country) {
+            this.country = country;
+        }
+
+        public String getYear() {
+            return year;
+        }
+
+        public void setYear(String year) {
+            this.year = year;
+        }
+
         @Override
         public String toString() {
             return "Model{" +
                     "ageGroup='" + ageGroup + '\'' +
                     ", males=" + males +
                     ", females=" + females +
+                    ", country='" + country + '\'' +
+                    ", year='" + year + '\'' +
                     '}';
         }
     }
