@@ -47,6 +47,38 @@ cd population-visualization
 **Available Endpoints** :
 `[/api/population]` – Returns population data for the selected region and year (as JSON).
 
+## API Specifications
+
+**Endpoint** : `[/api/population]`
+
+**Method**: GET
+
+This endpoint returns the population data for the selected country and year in JSON format.
+
+### Query Parameters:
+
+**region**  – The region for which the population data is required (e.g., India, Pakistan, etc.).
+
+**year**  – The year for which the population data is required (e.g., 2014, 2015, etc.).
+
+### Sample Request
+
+```bash
+GET http://localhost:8081/api/population?region=India&year=2014
+```
+### Sample Response
+
+```bash
+[
+  {
+    "ageGroup": "0-4",
+    "males": 25000000,
+    "females": 24000000
+  },
+  {
+    "ageGroup": "5-9",
+    "males": 23000000,
+
 
 
        
