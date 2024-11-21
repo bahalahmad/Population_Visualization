@@ -93,7 +93,16 @@ GET http://localhost:8081/api/population?region=India&year=2014
   ...
 ]
 ```
+## How It Works
+###  Frontend:
+The frontend allows users to select a region and year to filter the population data.
+When a user clicks the "Apply Filters" button, it sends a request to the backend API (/api/population) with the selected filters.
 
+The backend returns the population data for the specified region and year, which is then used to generate the population pyramid chart.
+
+### Backend:
+The backend handles requests to the `[/api/population]` endpoint, retrieving the corresponding population data from a database or static source.
+The data is returned as a JSON response, which the frontend uses to display the population pyramid chart.
 
        
       
