@@ -13,7 +13,10 @@ import java.util.stream.Collectors;
 
 @Service
     public class Servicee {
-        private static final int NUM_AGE_GROUPS = 18;
+
+    private static final Logger logger = (Logger) LoggerFactory.getLogger(Servicee.class);
+
+    private static final int NUM_AGE_GROUPS = 18;
 	    private static final int TOTAL_POPULATION = 100_000_000;
 
 	    public List<Model> getPopulationData(String region, String year) {
@@ -44,6 +47,8 @@ import java.util.stream.Collectors;
 	                    data.setYear(year);
 
 	                    populationData.add(data);
+
+                        logger.info("Country: {}, Year: {}, Age Group: {}, Males: {}, Females: {}", country, year, ageGroupStr, males, females);
 	                }
 	            }
 	        }
