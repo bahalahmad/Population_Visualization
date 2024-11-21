@@ -78,7 +78,21 @@ GET http://localhost:8081/api/population?region=India&year=2014
   {
     "ageGroup": "5-9",
     "males": 23000000,
-
+    "females": 22000000
+  },
+  {
+    "ageGroup": "10-14",
+    "males": 21000000,
+    "females": 20000000
+  },
+  {
+    "ageGroup": "15-19",
+    "males": 22000000,
+    "females": 21000000
+  },
+  ...
+]
+```
 
 
        
