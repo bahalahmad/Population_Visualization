@@ -5,6 +5,7 @@ import com.kb.population.visualization.service.Servicee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -20,8 +21,8 @@ public class Controller {
     }
 
     @GetMapping
-    public List<Model> getPopulationData() {
-        // Calls the service to get the mock population data and return it as a response
-        return service.getPopulationData();
+    public List<Model> getPopulationData(@RequestParam(required = false) String country,
+                                         @RequestParam(required = false) String year) {
+        return service.getPopulationData(country, year);
     }
 }
