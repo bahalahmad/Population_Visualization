@@ -1,21 +1,45 @@
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    background-color: #f4f4f9;
+    text-align: center;
 }
+
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
+    margin-top: 50px;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-}
 
 .chart-container {
+    width: 80%;
     height: 500px;
-    position: relative;
+    margin: 0 auto;
+}
+
+
+h1 {
+    color: #333;
+}
+
+.filters {
+    margin-bottom: 20px;
+}
+
+.filters select {
+    padding: 5px;
+    font-size: 16px;
+}
+
+#filterButton {
+    padding: 5px 15px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#filterButton:hover {
+    background-color: #45a049;
 }
