@@ -1,22 +1,18 @@
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     text-align: center;
 }
 
-
 .container {
     margin-top: 50px;
 }
-
 
 .chart-container {
     width: 80%;
     height: 500px;
     margin: 0 auto;
 }
-
 
 h1 {
     color: #333;
@@ -29,17 +25,4 @@ h1 {
 .filters select {
     padding: 5px;
     font-size: 16px;
-}
-
-#filterButton {
-    padding: 5px 15px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-#filterButton:hover {
-    background-color: #45a049;
 }
