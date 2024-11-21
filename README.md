@@ -129,6 +129,9 @@ Population_Visualization
 │   │           └── index.html  # Frontend HTML file
 |               └── style.css   # CSS file 
 |               └── app.js      # JS file
+├── pom.xml  # Maven build file
+└── README.md  # This file
+```
 
        
       
