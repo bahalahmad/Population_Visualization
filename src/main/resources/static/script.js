@@ -31,14 +31,14 @@ function fetchPopulationData(region = '', year = '') {
                         {
                             label: 'Males',
                             data: males,
-                            backgroundColor: 'rgba(54, 162, 235, 0.6)', // Blue for Males
+                            backgroundColor: 'rgba(54, 162, 235, 0.6)',
                             borderColor: 'rgba(54, 162, 235, 1)',
                             borderWidth: 1
                         },
                         {
                             label: 'Females',
                             data: females,
-                            backgroundColor: 'rgba(255, 99, 132, 0.6)', // Red for Females
+                            backgroundColor: 'rgba(255, 99, 132, 0.6)',
                             borderColor: 'rgba(255, 99, 132, 1)',
                             borderWidth: 1
                         }
@@ -47,6 +47,32 @@ function fetchPopulationData(region = '', year = '') {
                 options: {
                     indexAxis: 'y',
                     responsive: true,
+                    interaction: {
+                        mode: 'nearest',
+                        intersect: true,
+                    },
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    label += context.raw.toLocaleString(); // Ensuring proper format for population count
+                                    return label;
+                                }
+                            }
+                        },
+                        legend: {
+                            display: true,
+                            position: 'top',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Population Pyramid by Age Group'
+                        }
+                    },
                     scales: {
                         x: {
                             beginAtZero: true,
@@ -61,7 +87,12 @@ function fetchPopulationData(region = '', year = '') {
                                 text: 'Age Groups'
                             }
                         }
+                    },
+                    animation: {
+                        duration: 1000,
+                        easing: 'easeInOutQuad'
                     }
+
                 }
             });
         })
