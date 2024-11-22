@@ -12,6 +12,10 @@ body {
     width: 80%;
     height: 500px;
     margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 h1 {
@@ -20,9 +24,23 @@ h1 {
 
 .filters {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
-.filters select {
+.filters select,.filters button {
     padding: 5px;
     font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
+.filters button {
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+}
+.filters button:hover {
+    background-color: #0056b3;
+}
+
