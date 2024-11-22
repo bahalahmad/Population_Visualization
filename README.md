@@ -17,6 +17,17 @@ This project visualizes the population pyramid for various countries over the ye
 ### Mock Data
 This project uses mock data for population statistics. The mock data is generated in the Servicee class and is served through the  API endpoints. The data is generated randomly for demonstration purposes and includes population data for various age groups, genders, countries, and years
 
+### Snapshot 
+Below are some snapshots of the application
+![alt text](images/snippets_image01.png)
+
+
+![alt text](images/snippets_image02.png)
+
+
+
+![alt text](images/snippets_image_03.png)
+
 ## Prerequisites
 - **Java** (version 11 or higher)
 - **Maven** (or Maven wrapper)
