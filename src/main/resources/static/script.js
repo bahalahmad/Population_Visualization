@@ -49,7 +49,17 @@ function fetchPopulationData(region = '', year = '') {
                     responsive: true,
                     scales: {
                         x: {
-                            beginAtZero: true
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Population Count'
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Age Groups'
+                            }
                         }
                     }
                 }
