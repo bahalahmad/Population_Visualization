@@ -14,6 +14,9 @@ This project visualizes the population pyramid for various countries over the ye
 - **Spring Boot**: Creating REST API to serve population data
 - **Spring MVC**: Handling HTTP requests and responses
 
+### Mock Data
+This project uses mock data for population statistics. The mock data is generated in the Servicee class and is served through the  API endpoints. The data is generated randomly for demonstration purposes and includes population data for various age groups, genders, countries, and years
+
 ## Prerequisites
 - **Java** (version 11 or higher)
 - **Maven** (or Maven wrapper)
